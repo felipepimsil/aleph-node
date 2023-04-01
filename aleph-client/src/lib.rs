@@ -107,6 +107,10 @@ impl KeyPair {
         self.inner.signer()
     }
 
+    pub fn pair_signer(&self) -> PairSigner {
+        self.inner.clone()
+    }
+
     /// Returns corresponding AccountId
     pub fn account_id(&self) -> &AccountId {
         self.inner.account_id()
